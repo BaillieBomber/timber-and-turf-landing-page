@@ -244,7 +244,8 @@ export default function Home() {
 
         {/* ─── Services ─── */}
         {/* 6 — Warmer background, sage accent on icon tiles */}
-        <section id="services" className="relative overflow-hidden bg-white py-20 md:py-28">
+        <section id="services" className="relative overflow-hidden py-20 md:py-28">
+          <div className="absolute inset-0 bg-white/80 backdrop-blur-sm pointer-events-none" aria-hidden="true" />
           {/* 5 — Decorative leaf sprig top-right */}
           <LeafSprig className="absolute -top-6 right-10 h-32 text-emerald-600/8 rotate-[20deg] pointer-events-none" aria-hidden="true" />
           <LeafSprig className="absolute -bottom-8 left-8 h-28 text-emerald-700/6 -rotate-[30deg] pointer-events-none" aria-hidden="true" />
@@ -313,7 +314,7 @@ export default function Home() {
         {/* ─── Why Us ─── */}
         {/* 3 — Richer gradient background; 5 — floral accent */}
         <section id="why-us" className="relative overflow-hidden py-20 md:py-28">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-emerald-800 to-slate-900 pointer-events-none" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/85 via-emerald-800/85 to-slate-900/85 backdrop-blur-sm pointer-events-none" aria-hidden="true" />
           {/* 5 — Decorative floral / nature shapes */}
           <FloralAccent className="absolute top-8 left-8 size-48 text-white pointer-events-none" aria-hidden="true" />
           <FloralAccent className="absolute bottom-4 right-4 size-64 text-white pointer-events-none" aria-hidden="true" />
@@ -374,7 +375,8 @@ export default function Home() {
         </section>
 
         {/* ─── Reviews ─── */}
-        <section id="reviews" className="relative overflow-hidden bg-[#f7f5f0] py-20 md:py-28">
+        <section id="reviews" className="relative overflow-hidden py-20 md:py-28">
+          <div className="absolute inset-0 bg-[#f7f5f0]/80 backdrop-blur-sm pointer-events-none" aria-hidden="true" />
           {/* 5 — Subtle leaf sprigs as decorative accents */}
           <LeafSprig className="absolute top-10 right-10 h-40 text-emerald-700/7 rotate-[15deg] pointer-events-none" aria-hidden="true" />
           <LeafSprig className="absolute bottom-6 left-6 h-32 text-emerald-700/6 -rotate-[25deg] pointer-events-none" aria-hidden="true" />
@@ -438,7 +440,7 @@ export default function Home() {
         {/* ─── Conversion Banner ─── */}
         {/* 3 — Richer layered dark gradient with radial glow */}
         <section className="relative overflow-hidden py-20 md:py-28">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950 pointer-events-none" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-900/85 to-emerald-950/85 backdrop-blur-sm pointer-events-none" aria-hidden="true" />
           {/* 3 — Radial amber glow behind CTA */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
             <div className="size-[600px] rounded-full bg-amber-500/5 blur-3xl" />
@@ -469,7 +471,7 @@ export default function Home() {
       </main>
 
       {/* ─── Footer ─── */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-12 text-slate-400">
+      <footer className="relative bg-slate-950/85 backdrop-blur-sm border-t border-slate-800 py-12 text-slate-400">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
             {/* Brand */}
