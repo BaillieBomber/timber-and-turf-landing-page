@@ -105,7 +105,7 @@ export default function Home() {
         </DialogContent>
       </Dialog>
 
-      {/* ─── Fixed Background Image (stays in place on scroll) ─── */}
+      {/* ─── Fixed Background Image ─── */}
       <div
         className="fixed inset-0 pointer-events-none z-10"
         style={{
@@ -116,10 +116,7 @@ export default function Home() {
           backgroundRepeat: "no-repeat",
         }}
         aria-hidden="true"
-      >
-        {/* Fade out at bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#f7f5f0]" />
-      </div>
+      />
 
       {/* ─── Sticky Nav ─── */}
       <header className="sticky top-0 z-50 border-b border-slate-700/40 bg-slate-900/50 backdrop-blur-md">
@@ -161,10 +158,10 @@ export default function Home() {
       </header>
 
       <main className="relative z-20">
-        {/* ─── Hero (sits on top of fixed background image) ─── */}
+        {/* ─── Hero — fully transparent window into fixed background ─── */}
         <section className="relative overflow-hidden py-20 md:py-32">
-          {/* Transparent gradient overlay — only on hero content, excludes header */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent pointer-events-none" aria-hidden="true" />
+          {/* Dark scrim only at top so headline text is readable */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-transparent pointer-events-none" aria-hidden="true" />
           {/* Decorative grass — bottom left */}
           <GrassBlades className="absolute bottom-0 left-0 h-28 md:h-40 text-emerald-700/15 pointer-events-none" aria-hidden="true" />
           {/* Decorative grass — bottom right, flipped */}
@@ -187,13 +184,12 @@ export default function Home() {
                   <span className="text-slate-400">Rated by Local Homeowners</span>
                 </div>
 
-                {/* 2 — Bigger, bolder headline with weight contrast */}
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-slate-900 text-balance leading-[1.05]">
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white text-balance leading-[1.05]">
                   Your Weekend{" "}
-                  <span className="text-emerald-800">Belongs</span>{" "}
+                  <span className="text-emerald-300">Belongs</span>{" "}
                   to You.
                 </h1>
-                <p className="text-lg md:text-xl text-slate-500 leading-relaxed max-w-lg">
+                <p className="text-lg md:text-xl text-stone-200 leading-relaxed max-w-lg">
                   Premium mowing, precision garden maintenance, and immaculate upkeep for busy homeowners. Get your Saturdays back.
                 </p>
 
@@ -205,7 +201,7 @@ export default function Home() {
                   >
                     Schedule Your Free Estimate Call
                   </Button>
-                  <p className="text-sm text-slate-400 pl-1">
+                  <p className="text-sm text-stone-300 pl-1">
                     Takes 2 minutes &bull; Speak with a local specialist
                   </p>
                 </div>
@@ -242,10 +238,11 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ─── Gap — image shows through ─── */}
+        <div className="h-16" aria-hidden="true" />
+
         {/* ─── Services ─── */}
-        {/* 6 — Warmer background, sage accent on icon tiles */}
-        <section id="services" className="relative overflow-hidden py-20 md:py-28">
-          <div className="absolute inset-0 bg-white/80 backdrop-blur-sm pointer-events-none" aria-hidden="true" />
+        <section id="services" className="relative overflow-hidden bg-white py-20 md:py-28">
           {/* 5 — Decorative leaf sprig top-right */}
           <LeafSprig className="absolute -top-6 right-10 h-32 text-emerald-600/8 rotate-[20deg] pointer-events-none" aria-hidden="true" />
           <LeafSprig className="absolute -bottom-8 left-8 h-28 text-emerald-700/6 -rotate-[30deg] pointer-events-none" aria-hidden="true" />
@@ -311,10 +308,12 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ─── Gap — image shows through ─── */}
+        <div className="h-16" aria-hidden="true" />
+
         {/* ─── Why Us ─── */}
-        {/* 3 — Richer gradient background; 5 — floral accent */}
         <section id="why-us" className="relative overflow-hidden py-20 md:py-28">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/85 via-emerald-800/85 to-slate-900/85 backdrop-blur-sm pointer-events-none" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-emerald-800 to-slate-900 pointer-events-none" aria-hidden="true" />
           {/* 5 — Decorative floral / nature shapes */}
           <FloralAccent className="absolute top-8 left-8 size-48 text-white pointer-events-none" aria-hidden="true" />
           <FloralAccent className="absolute bottom-4 right-4 size-64 text-white pointer-events-none" aria-hidden="true" />
@@ -374,9 +373,11 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ─── Gap — image shows through ─── */}
+        <div className="h-16" aria-hidden="true" />
+
         {/* ─── Reviews ─── */}
-        <section id="reviews" className="relative overflow-hidden py-20 md:py-28">
-          <div className="absolute inset-0 bg-[#f7f5f0]/80 backdrop-blur-sm pointer-events-none" aria-hidden="true" />
+        <section id="reviews" className="relative overflow-hidden bg-[#f7f5f0] py-20 md:py-28">
           {/* 5 — Subtle leaf sprigs as decorative accents */}
           <LeafSprig className="absolute top-10 right-10 h-40 text-emerald-700/7 rotate-[15deg] pointer-events-none" aria-hidden="true" />
           <LeafSprig className="absolute bottom-6 left-6 h-32 text-emerald-700/6 -rotate-[25deg] pointer-events-none" aria-hidden="true" />
@@ -437,10 +438,12 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ─── Gap — image shows through ─── */}
+        <div className="h-16" aria-hidden="true" />
+
         {/* ─── Conversion Banner ─── */}
-        {/* 3 — Richer layered dark gradient with radial glow */}
         <section className="relative overflow-hidden py-20 md:py-28">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-900/85 to-emerald-950/85 backdrop-blur-sm pointer-events-none" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950 pointer-events-none" aria-hidden="true" />
           {/* 3 — Radial amber glow behind CTA */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
             <div className="size-[600px] rounded-full bg-amber-500/5 blur-3xl" />
@@ -471,7 +474,7 @@ export default function Home() {
       </main>
 
       {/* ─── Footer ─── */}
-      <footer className="relative bg-slate-950/85 backdrop-blur-sm border-t border-slate-800 py-12 text-slate-400">
+      <footer className="relative bg-slate-950 border-t border-slate-800 py-12 text-slate-400">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
             {/* Brand */}
