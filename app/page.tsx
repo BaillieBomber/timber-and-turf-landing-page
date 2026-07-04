@@ -122,14 +122,14 @@ export default function Home() {
       </div>
 
       {/* ─── Sticky Nav ─── */}
-      <header className="sticky top-0 z-50 border-b border-stone-200/60 bg-[#f7f5f0]/85 backdrop-blur-md">
+      <header className="sticky top-0 z-50 border-b border-slate-700/40 bg-slate-900/50 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
           <a
             href="#"
             className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-800 rounded"
           >
             <LeafSprig className="size-5 text-emerald-700" />
-            <span className="text-slate-900 font-semibold text-lg tracking-tight">
+            <span className="text-stone-50 font-semibold text-lg tracking-tight">
               Timber &amp; Turf Co.
             </span>
           </a>
@@ -143,7 +143,7 @@ export default function Home() {
               <a
                 key={label}
                 href={href}
-                className="text-sm text-slate-500 hover:text-slate-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-800 rounded"
+                className="text-sm text-stone-200 hover:text-stone-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
               >
                 {label}
               </a>
