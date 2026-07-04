@@ -107,7 +107,7 @@ export default function Home() {
 
       {/* ─── Fixed Background Image (stays in place on scroll) ─── */}
       <div
-        className="fixed inset-0 top-0 h-[600px] pointer-events-none z-10"
+        className="fixed inset-0 pointer-events-none z-10"
         style={{
           backgroundImage: "url('/garden-bg.jpg')",
           backgroundAttachment: "fixed",
@@ -117,8 +117,8 @@ export default function Home() {
         }}
         aria-hidden="true"
       >
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-black/30" />
+        {/* Fade out at bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#f7f5f0]" />
       </div>
 
       {/* ─── Sticky Nav ─── */}
@@ -163,7 +163,7 @@ export default function Home() {
       <main className="relative z-20">
         {/* ─── Hero (sits on top of fixed background image) ─── */}
         <section className="relative overflow-hidden py-20 md:py-32">
-          {/* Transparent gradient overlay — reveals garden image, keeps text readable */}
+          {/* Transparent gradient overlay — only on hero content, excludes header */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent pointer-events-none" aria-hidden="true" />
           {/* Decorative grass — bottom left */}
           <GrassBlades className="absolute bottom-0 left-0 h-28 md:h-40 text-emerald-700/15 pointer-events-none" aria-hidden="true" />
