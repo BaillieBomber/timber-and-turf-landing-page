@@ -163,8 +163,8 @@ export default function Home() {
       <main className="relative z-20">
         {/* ─── Hero (sits on top of fixed background image) ─── */}
         <section className="relative overflow-hidden py-20 md:py-32">
-          {/* Warm background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#f7f5f0] via-[#f0ede5] to-[#e8f0e9] pointer-events-none" aria-hidden="true" />
+          {/* Transparent gradient overlay — reveals garden image, keeps text readable */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent pointer-events-none" aria-hidden="true" />
           {/* Decorative grass — bottom left */}
           <GrassBlades className="absolute bottom-0 left-0 h-28 md:h-40 text-emerald-700/15 pointer-events-none" aria-hidden="true" />
           {/* Decorative grass — bottom right, flipped */}
