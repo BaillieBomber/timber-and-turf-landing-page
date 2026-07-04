@@ -105,6 +105,22 @@ export default function Home() {
         </DialogContent>
       </Dialog>
 
+      {/* ─── Fixed Background Image (stays in place on scroll) ─── */}
+      <div
+        className="fixed inset-0 top-0 h-[600px] pointer-events-none z-10"
+        style={{
+          backgroundImage: "url('/garden-bg.jpg')",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+        aria-hidden="true"
+      >
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
+
       {/* ─── Sticky Nav ─── */}
       <header className="sticky top-0 z-50 border-b border-stone-200/60 bg-[#f7f5f0]/85 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
@@ -144,8 +160,8 @@ export default function Home() {
         </div>
       </header>
 
-      <main>
-        {/* ─── Hero ─── */}
+      <main className="relative z-20">
+        {/* ─── Hero (sits on top of fixed background image) ─── */}
         <section className="relative overflow-hidden py-20 md:py-32">
           {/* Warm background gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#f7f5f0] via-[#f0ede5] to-[#e8f0e9] pointer-events-none" aria-hidden="true" />
